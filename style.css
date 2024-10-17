@@ -1,0 +1,437 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    border-bottom: 1px solid rgba(100, 100, 100, 0.5);
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li:first-child a {
+    color: #00FF00;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.hero {
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Arrange children in a column */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 50px 20px;
+}
+
+.btn1 {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    padding-block: 0.4rem;
+    padding-inline: 1.20rem;
+    background-color: white;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    gap: 10px;
+    font-weight: bold;
+    border: 3px solid #ffffff4d;
+    outline: none;
+    overflow: hidden;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn1:hover {
+    transform: scale(1.05);
+    border-color: #fff9;
+}
+
+.btn1:hover .icon {
+    transform: translate(4px);
+}
+
+.btn1:hover::before {
+    animation: shine 1.5s ease-out infinite;
+}
+
+.btn1::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 30%,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+}
+
+@keyframes shine {
+    0% {
+        left: -100px;
+    }
+
+    60% {
+        left: 100%;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+.hero .first-h1 {
+    font-size: 48px;
+    color: white;
+    font-weight: 900;
+}
+
+.hero .h1-container {
+    display: flex;
+    font-size: 48px;
+    color: white;
+    font-weight: 900;
+}
+
+.hero .h1-container .to {
+    font-size: 48px;
+    color: white;
+    font-weight: 900;
+}
+
+.hero .h1-container .second-h2 {
+    font-size: 48px;
+    font-weight: 900;
+    margin-left: 7px;
+    background: linear-gradient(60deg, #ffff00, #07f107);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; 
+}
+
+.hero p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ccc;
+}
+
+.service .sub-service {
+    margin: 50px 260px;
+}
+
+.service .content {
+    display: flex;
+    justify-content: space-between;
+}
+.service .content h1 {
+    font-size: 35px;
+}
+
+.circle {
+    display: inline-flex; /* Use inline-flex for alignment */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    width: 40px; /* Circle width */
+    height: 40px; /* Circle height */
+    border-radius: 50%; /* Makes it circular */
+    border: 1px solid;
+    color: black; /* Circle color */
+    margin-left: 20px;
+}
+
+.right-arrow {
+    font-size: 20px; /* Arrow size */
+}
+.card {
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 160px;
+}
+.card .card-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid;
+    padding: 5px;
+    font-size: 10px;
+}
+
+.card .card-header span {
+    margin-left: 10px;
+}
+
+.card .card-header img {
+    height: 20px;
+    width: 15px;
+    border-radius: 30%;
+}
+.card-body {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text */
+    border-bottom: 2px solid;
+}
+
+.card-body h5 {
+    margin-top: 20px;
+}
+
+.card-body img {
+    margin: 20px 0 3px 0; /* Add space between the text and image */
+    width: 130px;
+}
+
+.card-footer .btn2 {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Smaller shadow */
+    padding-block: 0.2rem; /* Further decrease vertical padding */
+    padding-inline: 0.8rem; /* Further decrease horizontal padding */
+    background-color: white;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    gap: 8px; /* Adjust gap if necessary */
+    font-weight: bold;
+    border: 3px solid #ffffff4d;
+    outline: none;
+    overflow: hidden;
+    font-size: 12px; /* Decrease font size */
+    cursor: pointer;
+    margin: 5px 5px 5px auto;
+}
+
+.card-footer .btn2 .icon {
+    width: 18px; /* Decrease icon size */
+    height: 18px; /* Decrease icon size */
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(60deg, #ffff00, #07f107);
+}
+
+
+.card-footer .btn2:hover .icon {
+    transform: translate(4px);
+}
+
+.card-footer .btn2 path {
+    background: linear-gradient(60deg, #ffff00, #07f107);
+    border-radius: 50%;
+}
+.card-footer .btn2 svg {
+    border-radius: 50%;
+}
+.card-container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-container .card:nth-child(1) {
+    background-color: #daecda;
+}
+.card-container .card:nth-child(2) {
+    background-color: lightcyan; 
+}
+.card-container .card:nth-child(3) {
+    background-color: rgb(245, 225, 225); 
+}
+.card-container .card:nth-child(4) {
+    background-color: lightsteelblue; 
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+footer .border {
+    border-bottom: 1px solid rgba(150, 150, 150, 0.5);
+    margin: 10px 200px 30px 200px;
+}
+footer p {
+    color: rgba(250, 250, 250, 0.7);
+}
+
+
+
+/* Existing CSS styles */
+
+/* ... Your existing CSS code ... */
+
+/* Responsive Styles for screens 768px or smaller */
+@media (max-width: 768px) {
+    /* Adjust header navigation */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    header nav ul li a {
+        font-size: 14px;
+    }
+
+    /* Adjust hero section */
+    .hero {
+        padding: 30px 10px;
+    }
+
+    .hero .first-h1,
+    .hero .h1-container .to,
+    .hero .h1-container .second-h2 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .btn1 {
+        padding-block: 0.3rem;
+        padding-inline: 1rem;
+        font-size: 14px;
+    }
+
+    .btn1 .icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Adjust service section margins */
+    .service .sub-service {
+        margin: 30px 20px;
+    }
+
+    /* Adjust content section in service */
+    .service .content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .service .content h1 {
+        font-size: 28px;
+    }
+
+    .service .content p {
+        font-size: 16px;
+    }
+
+    .service .content div:nth-child(2) {
+        margin-top: 20px;
+    }
+
+    /* Hide arrows or adjust their size */
+    .circle,
+    .service .content span[style*="font-size: 24px"] {
+        display: none;
+    }
+
+    /* Adjust card containers */
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-container .card {
+        margin-bottom: 20px;
+        width: 60%;
+        max-width: 250px;
+    }
+
+    /* Adjust card header */
+    .card .card-header {
+        font-size: 12px;
+    }
+
+    .card .card-header img {
+        height: 25px;
+        width: 20px;
+    }
+
+    .card .card-header span {
+        margin-left: 8px;
+    }
+
+    /* Adjust card body */
+    .card-body h5 {
+        margin-top: 15px;
+        font-size: 18px;
+    }
+
+    .card-body img {
+        width: 600%;
+        max-width: 150px;
+    }
+
+    /* Adjust card footer button */
+    .card-footer .btn2 {
+        padding-block: 0.3rem;
+        padding-inline: 1rem;
+        font-size: 14px;
+        margin: 10px auto 5px auto;
+    }
+
+    .card-footer .btn2 .icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Adjust footer */
+    footer .border {
+        margin: 10px 50px 20px 50px;
+    }
+}
